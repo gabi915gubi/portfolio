@@ -1,4 +1,4 @@
-```markdown
+
 # 💼 Meu Portfólio de Desenvolvedor
 
 Projeto de portfólio pessoal desenvolvido com **HTML5, CSS3 e JavaScript (ES6+)**, focado na aplicação prática de conceitos fundamentais do desenvolvimento Web Front-End e integração com APIs.
