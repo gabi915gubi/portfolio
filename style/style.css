@@ -1,127 +1,233 @@
 /* ==========================
-   ESTILOS GLOBAIS
+   ESTILOS GLOBAIS E RESET
 ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Um cinza bem claro para dar contraste */
+    color: #212529; /* Preto suave para leitura confortável */
+    transition: background-color 0.4s ease, color 0.4s ease;
+    line-height: 1.6;
+}
+
+/* Container Principal (Efeito de Cartão Flutuante) */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
     padding: 40px;
-    background-color: white;
-    color: black;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Linhas divisórias modernas */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 30px 0;
 }
 
 /* ==========================
-   MODO ESCURO
+   MODO ESCURO (SUAVE E ELEGANTE)
 ========================== */
-
 body.dark-mode {
     background-color: #121212;
-    color: white;
+    color: #f8f9fa;
+}
+
+body.dark-mode main {
+    background: #1e1e1e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode hr {
+    background: #333333;
 }
 
 body.dark-mode #lista-habilidades li {
-    background: #333;
-    border-color: #555;
-    color: white;
+    background: #2d2d2d;
+    border-color: #444444;
+    color: #f8f9fa;
+}
+
+body.dark-mode #quiz-container,
+body.dark-mode input {
+    border-color: #444444;
+    background: #252525;
+}
+
+body.dark-mode a {
+    color: #399cff;
 }
 
 /* ==========================
    TIPOGRAFIA
 ========================== */
-
 h1 {
+    color: #007bff; /* Mantido seu azul original */
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
     color: #007bff;
-    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px 0;
+    color: inherit;
+}
+
+strong {
+    color: #007bff;
+}
+
+body.dark-mode strong {
+    color: #399cff;
 }
 
 /* ==========================
-   QUIZ
+   HABILIDADES (TAGS MODERNAS)
 ========================== */
-
-#quiz-container {
-    margin: 30px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-
-#resultado-quiz {
-    margin-top: 15px;
-    font-weight: bold;
-    min-height: 40px;
-}
-
-/* ==========================
-   HABILIDADES
-========================== */
-
 #lista-habilidades {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
 }
 
 #lista-habilidades li {
-    display: inline-block;
-    background: #f0f0f0;
-    margin: 5px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
+    background: #f0f4f8; /* Azul cinzento bem sutil */
+    padding: 8px 18px;
+    border-radius: 30px;
+    border: 1px solid #d0d7de;
+    font-weight: 500;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+#lista-habilidades li:hover {
+    transform: translateY(-3px);
 }
 
 /* ==========================
-   BOTÕES
+   BOTÕES (INTERATIVOS)
 ========================== */
-
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 8px;
-    background: #007bff;
+    background: #007bff; /* Seu azul original */
     color: white;
+    font-weight: 600;
+    font-size: 14px;
     cursor: pointer;
     margin: 5px;
-    transition: 0.2s;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2.5);
 }
 
 button:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
+    background: #0056b3; /* Azul um pouco mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.35);
 }
 
-/* Adiciona um feedback visual quando o botão de tradução estiver desativado */
+button:active {
+    transform: translateY(0);
+}
+
 button:disabled {
-    background: #ccc;
-    color: #666;
+    background: #ccc !important;
+    color: #666 !important;
     cursor: not-allowed;
-    transform: none;
-    opacity: 1;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Botão fixo de Modo Escuro no topo */
+#modo {
+    margin-bottom: 25px;
 }
 
 /* ==========================
-   INPUTS
+   INPUTS E QUIZ
 ========================== */
-
 input {
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     border: 1px solid #ccc;
     margin: 10px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+#quiz-container {
+    margin: 20px 0;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+#resultado-quiz, #resultadoNome {
+    margin-top: 15px;
+    font-weight: 600;
+    min-height: 25px;
 }
 
 /* ==========================
-   FRASE
+   PROJETOS E LINKS
 ========================== */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 5px;
+    transition: color 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
 
 #resultado-frase {
     margin-top: 20px;
     font-style: italic;
+    padding: 10px 20px;
+    background: rgba(0, 123, 255, 0.05);
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    display: inline-block;
 }
