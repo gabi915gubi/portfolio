@@ -147,7 +147,7 @@ function mostrarTempoRestante() {
 // ==========================
 
 function atualizarResultadoQuiz(mensagem) {
-    obterElemento("resultado-quiz").innerText = mensagem;
+    obterElemento("resultado-quiz").innerText = message;
 }
 
 function configurarQuiz() {
@@ -161,15 +161,14 @@ function configurarQuiz() {
 }
 
 // ==========================
-// NOTA E STATUS
+// NOTA E STATUS (ATUALIZADO)
 // ==========================
 
 function mostrarNota() {
-    let nota = 8;
-    let status = nota >= 7 ? "Aprovado" : "Reprovado";
+    let status = "Aguardando Resultado";
 
     obterElemento("statusNota").innerHTML = `
-        Nota: ${nota} - <strong>${status}</strong>
+        Nota: <strong>Pendente</strong> - Status: <strong>${status} ⏳</strong>
     `;
 }
 
