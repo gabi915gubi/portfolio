@@ -14,7 +14,7 @@ O sistema possui as seguintes funcionalidades:
 * **Interação com Input:** Saudação personalizada baseada no nome digitado pelo usuário.
 * **Quiz de Perfil Tech:** Escolha interativa de orientação de carreira (Front-End ou Back-End).
 * **Contador para Formatura:** Cálculo dinâmico do tempo restante (anos, meses e dias) até a data da formatura.
-* **Exibição de Status e Data:** Mostra o dia da semana atual e o status de aprovação acadêmica de forma automatizada.
+* **Exibição de Status e Data:** Mostra o dia da semana atual e o status da avaliação de forma automatizada.
 * **Lista de Habilidades e Projetos:** Renderização dinâmica a partir de arrays e objetos JavaScript.
 * **Consumo de API Externa:** Busca de frases motivacionais aleatórias em inglês.
 * **Tradução Assíncrona:** Integração com API de tradução para converter a frase capturada para o português em tempo real.
@@ -24,18 +24,17 @@ O sistema possui as seguintes funcionalidades:
 
 # 📂 Estrutura do Projeto
 
-A organização dos arquivos segue a estrutura de diretórios abaixo:
+A organização dos arquivos segue a estrutura de diretórios abaixo (com o arquivo principal na raiz para deploy na Vercel):
 
 ```text
 Portfólio/
 │
-├── Pages/
-│   └── index.html
+├── index.html
 │
-├── Style/
+├── style/
 │   └── style.css
 │
-└── Script/
+└── script/
     └── script.js
 
 ```
@@ -54,7 +53,7 @@ Insere dinamicamente na página os dados estruturados no código:
 
 ## ⌨️ Input Interativo
 
-O usuário pode digitar seu nome no campo de texto e, ao clicar em "Mostrar Nome", a interface exibe uma saudação personalizada:
+O usuário pode digitar seu nome no campo de texto e, ao clicar em "Enviar", a interface exibe uma saudação personalizada:
 
 ```text
 Olá, [Nome do Usuário]
@@ -77,8 +76,8 @@ Utiliza o objeto `Date` do JavaScript para calcular o tempo restante com base na
 
 ## 🕒 Informações Locais e Acadêmicas
 
-* **Dia da Semana:** Identifica o dia atual do sistema e mapeia para um formato amigável em português (ex: *"Hoje é: Sexta-feira"*).
-* **Status da Nota:** Avalia a nota atual (definida como `8`) e exibe o status com base na média 7: **Nota: 8 - Aprovado**.
+* **Dia da Semana:** Identifica o dia atual do sistema e mapeia para um formato amigável em português (ex: *"Hoje é: Segunda-feira"*).
+* **Status da Nota:** Configurado temporariamente para aguardar a publicação dos resultados oficiais do período: **Nota: Pendente - Status: Aguardando Resultado ⏳**.
 
 ## ⚡ Habilidades Dinâmicas
 
@@ -111,7 +110,7 @@ Gerencia a alternância da classe `.dark-mode` no corpo da página (`<body>`), a
 # 🛠️ Tecnologias Utilizadas
 
 * **HTML5** – Estruturação semântica do portfólio.
-* **CSS3** – Estilização moderna, efeitos de hover, manipulação de estados (`:disabled`) e transições suaves de cor.
+* **CSS3** – Estilização moderna, efeitos de hover, animações, manipulação de estados (`:disabled`) e transições suaves de cor.
 * **JavaScript (ES6+)** – Lógica de programação, funções assíncronas, manipulação do DOM e controle de eventos.
 * **DummyJSON Quotes API** – Serviço público para consumo de frases aleatórias.
 * **MyMemory API** – API de tradução gratuita utilizada para traduzir textos de inglês para português (`en|pt`).
@@ -133,20 +132,19 @@ Gerencia a alternância da classe `.dark-mode` no corpo da página (`<body>`), a
 # ▶️ Como Executar o Projeto
 
 1. Clone este repositório para sua máquina local:
+
 ```bash
 git clone [https://github.com/gabi915gubi/Portfolio.git](https://github.com/gabi915gubi/Portfolio.git)
 
 ```
 
-
 2. Navegue até a pasta do projeto.
 3. Abra o arquivo de visualização no seu navegador:
+
 ```text
-Pages/index.html
+index.html
 
 ```
-
-
 
 ---
 
@@ -176,4 +174,5 @@ Este projeto está sob a licença **MIT**. Veja o arquivo correspondente para ma
 
 ```
 
-```
+---
+
