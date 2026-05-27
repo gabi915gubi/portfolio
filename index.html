@@ -3,65 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docs - Hélio Gabriel</title>
+    <title>Portfólio - Hélio Gabriel</title>
     
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
 
-    <button id="modo">Modo Escuro</button>
+    <button id="modo">🌓 Modo Escuro</button>
 
     <main>
-        <h1 id="meuNome">Carregando nome...</h1>
-        <p id="minhaBio">Carregando biografia...</p>
-        
-        <p id="curso">Carregando curso...</p>
-        <p id="instituicao">Carregando instituição...</p>
-        
-        <p id="diaAtual"></p>
-        <p id="tempoRestante"></p>
+        <header>
+            <h1 id="meuNome">Carregando nome...</h1>
+            <p id="minhaBio" class="bio-texto">Carregando biografia...</p>
+        </header>
 
         <hr>
 
-        <h3>Minhas Habilidades</h3>
-        <ul id="lista-habilidades"></ul>
+        <section class="info-academica">
+            <p id="curso">📚 Carregando curso...</p>
+            <p id="instituicao">🏫 Carregando instituição...</p>
+            <p id="statusNota">📊 Carregando status...</p>
+        </section>
 
         <hr>
 
-        <h3>Status Académico</h3>
-        <p id="statusNota"></p>
+        <section class="tempo-section">
+            <p id="diaAtual">📅 </p>
+            <p id="tempoRestante">🎓 </p>
+        </section>
 
         <hr>
 
-        <div id="quiz-container">
-            <h3>Qual perfil de desenvolvedor prefere?</h3>
-            <button id="btn-visual">Front-End (Visual)</button>
-            <button id="btn-logica">Back-End (Lógica)</button>
+        <section>
+            <h3>⚡ Minhas Habilidades</h3>
+            <ul id="lista-habilidades"></ul>
+        </section>
+
+        <hr>
+
+        <section id="quiz-container">
+            <h3>🧠 Qual perfil de desenvolvedor você prefere?</h3>
+            <div class="quiz-botoes">
+                <button id="btn-visual">🎨 Front-End (Visual)</button>
+                <button id="btn-logica">⚙️ Back-End (Lógica)</button>
+            </div>
             <p id="resultado-quiz">Selecione uma opção acima.</p>
-        </div>
+        </section>
 
         <hr>
 
-        <div>
-            <h3>Diga-me o seu nome</h3>
+        <section class="interactive-box">
+            <h3>👋 Vamos nos conhecer?</h3>
             <input type="text" id="nomeInput" placeholder="Digite seu nome aqui">
             <button id="btnNome">Enviar</button>
             <p id="resultadoNome"></p>
-        </div>
+        </section>
 
         <hr>
 
-        <div>
-            <h3>Frase do Dia (API)</h3>
-            <button id="buscar-frase">Buscar Frase</button>
-            <button id="traduzir-frase" disabled>Traduzir Frase</button>
+        <section class="api-box">
+            <h3>💬 Frase do Dia (API Internacional)</h3>
+            <button id="buscar-frase">🔄 Buscar Frase</button>
+            <button id="traduzir-frase" disabled>🇧🇷 Traduzir Frase</button>
             <p id="resultado-frase">Clique no botão para carregar uma frase aleatória.</p>
-        </div>
+        </section>
 
         <hr>
 
-        <h3>Meus Projetos</h3>
-        <div id="lista-projects" style="display:none;"></div> <div id="lista-projetos"></div>
+        <section>
+            <h3>📂 Meus Projetos Principais</h3>
+            <div id="lista-projects" style="display:none;"></div> 
+            <div id="lista-projetos" class="projetos-grid"></div>
+        </section>
     </main>
 
     <script src="./script/script.js"></script>
