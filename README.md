@@ -172,4 +172,4 @@ Este projeto foi desenvolvido com a colaboração e parceria de **Kaiky de Souza
 
 Este projeto está sob a licença **MIT**. Veja o arquivo correspondente para mais detalhes.
 
-```
+---
