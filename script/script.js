@@ -143,11 +143,11 @@ function mostrarTempoRestante() {
 }
 
 // ==========================
-// INTERAÇÃO QUIZ
+// INTERAÇÃO QUIZ (CORRIGIDO)
 // ==========================
 
 function atualizarResultadoQuiz(mensagem) {
-    obterElemento("resultado-quiz").innerText = message;
+    obterElemento("resultado-quiz").innerText = mensagem;
 }
 
 function configurarQuiz() {
@@ -161,7 +161,7 @@ function configurarQuiz() {
 }
 
 // ==========================
-// NOTA E STATUS (ATUALIZADO)
+// NOTA E STATUS (CORRIGIDO)
 // ==========================
 
 function mostrarNota() {
